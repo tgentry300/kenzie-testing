@@ -6,11 +6,13 @@
 
 3: Run `node run.js ___student's_repo_url___`. Upon execution the output of the test results will be written to your console.
 
-If you would like to test it on a dummy submission link, use `node run.js https://github.com/swkane/fizzbuzz d`
+If you would like to test it on a dummy submission link, use `node run.js https://github.com/swkane/fizzbuzz`
 
 # Assessment Instructions
 
 - Create a file called `fizzbuzz.js` (if you do not already have one)
+- Create a file called `index.html`
+- Connect your javascript file with your html file using a `<script>` tag within the `<body>` tag
 
 - Write a function named `fizzbuzz`.
 - This function will have one parameter - `maxValue`.
@@ -23,11 +25,12 @@ If you would like to test it on a dummy submission link, use `node run.js https:
 - This function should return this string after 1000 iterations of the loop.
 - If implemented correctly, the string you return should have a trailing comma, leave this comma
 
-- Write a second function named `writeToDOM`.
-- This function will have one parameter - `fizzbuzzResult`.
-- This function should take the string you pass to it, `fizzBuzzResult`, and attach it to the DOM
+- Once you have written your `fizzbuzz` function, append its result to the page using `document.write()`
+- In order to do this, call your `fizzbuzz` function and pass 100 as an argument
+- Pass the result of this function call as an argument to `document.write()`
+- This should append the return value of your function to the page
 
-### IMPORTANT: If you do not name and export your functions correctly, the tests will not run and the submission will not be accepted.
+### IMPORTANT: If you do not name your functions correctly, the tests will not run and the submission will not be accepted.
 
 ## Bonus
 
