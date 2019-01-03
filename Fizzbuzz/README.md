@@ -30,7 +30,7 @@ If you would like to test it on a dummy submission link, use `node run.js https:
 - Pass the result of this function call as an argument to `document.write()`
 - This should append the return value of your function to the page
 
-### IMPORTANT: If you do not name your functions correctly, the tests will not run and the submission will not be accepted.
+### IMPORTANT: If you do not name and export your functions correctly, the tests will not run and the submission will not be accepted.
 
 ## Bonus
 
