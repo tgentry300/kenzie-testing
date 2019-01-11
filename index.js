@@ -31,9 +31,8 @@ const caseInsensitivePattern = new RegExp(args.assessment, 'i')
 fs.readdir(`${__dirname}/Tests`, (err, items) => {
     items.forEach((item) => {
         if (caseInsensitivePattern.test(item)){
-            console.log(__filename)
 
-            process.chdir(`${__dirname}Tests/${item}`)
+            process.chdir(`${__dirname}/Tests/${item}`)
             
             const { gitlink } = args
             exec('npm i')
