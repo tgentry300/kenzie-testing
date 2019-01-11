@@ -33,9 +33,14 @@ fs.readdir(`${__dirname}/Tests`, (err, items) => {
         if (caseInsensitivePattern.test(item)){
 
             process.chdir(`${__dirname}/Tests/${item}`)
+
+            // This installs all required npm modules and awaits the install before continuing to next exec call
+            const installPackages = exec('npm i')
+            installPackages.on('exit', () => {
+                process.exit
+            })
             
             const { gitlink } = args
-            exec('npm i')
             exec(`npm run test ${gitlink ? gitlink : ''}`, (error, stdout, stderr) => {
                 console.log(stdout)
             })
